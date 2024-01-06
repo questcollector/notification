@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.0.1'
+    id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.samsung.sds.emarket'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // spring cloud stream
+    implementation 'org.springframework.cloud:spring-cloud-starter-stream-rabbit:4.0.0'
+    testImplementation 'org.springframework.cloud:spring-cloud-stream-test-binder:4.0.0'
+
+    // lombok
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // slack sdk
+    implementation "com.slack.api:slack-api-client:1.27.3"
+
+    // convert OffsetDateTime
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.14.2'
+
+    // Spring Actuator
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    // Spring Boot Admin
+    implementation 'de.codecentric:spring-boot-admin-starter-client:3.0.0-M8'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
