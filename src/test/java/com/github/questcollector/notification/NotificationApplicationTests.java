@@ -1,4 +1,4 @@
-package com.samsung.sds.emarket.notification;
+package com.github.questcollector.notification;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

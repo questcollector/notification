@@ -1,7 +1,7 @@
-package com.samsung.sds.emarket.notification.event;
+package com.github.questcollector.notification.event;
 
-import com.samsung.sds.emarket.notification.model.CampaignDTO;
-import com.samsung.sds.emarket.notification.service.NotificationService;
+import com.github.questcollector.notification.model.CampaignDTO;
+import com.github.questcollector.notification.service.NotificationService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
@@ -21,7 +21,7 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 @SpringBootTest
-public class CampaignEventListenerConnectTests {
+class CampaignEventListenerConnectTests {
 
     @SpyBean
     private CampaignAddedEventHandler campaignAddedEventHandler;
@@ -36,7 +36,7 @@ public class CampaignEventListenerConnectTests {
     private ArgumentCaptor<Message<CampaignDTO>> captor;
 
     @Test
-    public void test_listen_campaignAddedEvent() throws IOException {
+    void test_listen_campaignAddedEvent() throws IOException {
         // Set Message Payload
         String name = "test name";
         OffsetDateTime from = OffsetDateTime.parse("2022-05-18T05:01:43+09:00");

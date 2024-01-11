@@ -1,4 +1,4 @@
-package com.samsung.sds.emarket.notification.event;
+package com.github.questcollector.notification.event;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cloud.stream.binder.test.OutputDestination;
 
 @SpringBootTest
-public class NotificationEventPublisherConnectTests {
+class NotificationEventPublisherConnectTests {
 
     @Autowired
     private OutputDestination outputDestination;
@@ -16,7 +16,7 @@ public class NotificationEventPublisherConnectTests {
     private NotificationEventPublisher notificationEventPublisher;
 
     @Test
-    public void test_publish_notificationSuccessEvent() {
+    void test_publish_notificationSuccessEvent() {
         String testMessage = "{\"text\":\"test message\"}";
 
         notificationEventPublisher.publishNotificationSuccessEvent(testMessage);
@@ -30,7 +30,7 @@ public class NotificationEventPublisherConnectTests {
     }
 
     @Test
-    public void test_publish_notificationFailedEvent() {
+    void test_publish_notificationFailedEvent() {
         String testMessage = "test error message";
 
         notificationEventPublisher.publishNotificationFailedEvent(testMessage);

@@ -1,8 +1,8 @@
-package com.samsung.sds.emarket.notification.service.slack;
+package com.github.questcollector.notification.service.slack;
 
-import com.samsung.sds.emarket.notification.event.NotificationEventPublisher;
-import com.samsung.sds.emarket.notification.model.CampaignDTO;
-import com.samsung.sds.emarket.notification.service.NotificationService;
+import com.github.questcollector.notification.event.NotificationEventPublisher;
+import com.github.questcollector.notification.model.CampaignDTO;
+import com.github.questcollector.notification.service.NotificationService;
 import com.slack.api.Slack;
 import com.slack.api.webhook.WebhookResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -17,7 +17,7 @@ import java.io.IOException;
 @Slf4j
 public class NotificationServiceImpl implements NotificationService {
     @Value("${slack.webhook.url}")
-    private String WEBHOOK_URL;
+    private String webhookUrl;
     private final Slack slack;
 
     private final NotificationEventPublisher notificationEventPublisher;
@@ -32,7 +32,7 @@ public class NotificationServiceImpl implements NotificationService {
 
         String content = buildMessageContent(message);
 
-        WebhookResponse response = slack.send(WEBHOOK_URL, content);
+        WebhookResponse response = slack.send(webhookUrl, content);
 
         int responseStatusCode = response.getCode();
 

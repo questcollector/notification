@@ -1,6 +1,6 @@
-package com.samsung.sds.emarket.notification.service;
+package com.github.questcollector.notification.service;
 
-import com.samsung.sds.emarket.notification.model.CampaignDTO;
+import com.github.questcollector.notification.model.CampaignDTO;
 import org.springframework.messaging.Message;
 
 import java.io.IOException;

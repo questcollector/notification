@@ -1,4 +1,4 @@
-package com.samsung.sds.emarket.notification.model;
+package com.github.questcollector.notification.model;
 
 import lombok.Data;
 

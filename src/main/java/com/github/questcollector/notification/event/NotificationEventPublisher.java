@@ -1,4 +1,4 @@
-package com.samsung.sds.emarket.notification.event;
+package com.github.questcollector.notification.event;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.stream.function.StreamBridge;

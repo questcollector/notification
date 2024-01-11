@@ -1,4 +1,4 @@
-package com.samsung.sds.emarket.notification.service.slack;
+package com.github.questcollector.notification.service.slack;
 
 import com.slack.api.Slack;
 import org.springframework.context.annotation.Bean;

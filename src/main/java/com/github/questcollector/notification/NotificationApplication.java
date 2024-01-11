@@ -1,4 +1,4 @@
-package com.samsung.sds.emarket.notification;
+package com.github.questcollector.notification;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
